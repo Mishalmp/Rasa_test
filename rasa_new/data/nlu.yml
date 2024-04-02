@@ -1,6 +1,32 @@
 version: "3.1"
 
+
 nlu:
+- intent: find_time_zone
+  examples: |
+    - can you tell me the time ?
+    - could you tell me the time ?
+    - i need you to find the timezone
+    - can you find me a timezone ?
+    - what time is it ?
+
+- intent: city_info
+  examples: | 
+   - [Europe/London](target_timezone)
+   - [Europe/Lisbon](target_timezone)
+   - [America/New_york](target_timezone)
+   - [Africa/johannesburg](target_timezone)
+   - [Europe/Istanbul](target_timezone)
+   - [Europe/Berlin](target_timezone)
+   - [Asia/Kolkata](target_timezone)
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very Much 
+    - thanks
+    - great,thanks
+
 - intent: greet
   examples: |
     - hey

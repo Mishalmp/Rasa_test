@@ -1,5 +1,20 @@
 version: "3.1"
 
+
+entities:
+- target_timezone
+
+slots:
+
+  target_timezone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: target_timezone
+
+actions:
+ - action_find_timezone
+
 intents:
   - greet
   - goodbye
@@ -8,10 +23,23 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - find_time_zone
+  - city_info
+  - thanks
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! I am Rasa bot Instance created by Mishal MP . I'm Here to help you. Ask me Anything"
+
+  utter_ask_city_info:
+  - text: "Do you want to learn timezone of any city? Please give me input in this format : /Area/Region"
+
+  utter_finding_timezone:
+  - text: "Give me a sec to look it up !!!"
+
+  utter_you_are_welcome:
+  - text: "You are welcome ❤️"  
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -24,7 +52,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "poda poo poyi tharathil kali....👋"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
